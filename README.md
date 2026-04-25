@@ -6,8 +6,7 @@ A sleek, animated light/dark mode toggle built with pure **HTML**, **CSS**, and 
 
 ## 🖼️ Preview
 
-![Theme Toggle Preview](light-mode-preview.png)
-![Theme Toggle Preview](dark-mode-preview.png)
+![Theme Toggle Preview](preview.png)
 
 ---
 
