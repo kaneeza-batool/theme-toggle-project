@@ -1,32 +1,124 @@
-# Theme Toggle
+# 🌗 Theme Toggle
 
-A light/dark mode toggle built with JavaScript closures. Switches themes smoothly with persistent state handling and clean CSS transitions.
-
----
-
-## Screenshots
-
-> _Add screenshots here after capturing them_
+A sleek, animated light/dark mode toggle built with pure **HTML**, **CSS**, and **JavaScript** — no frameworks, no libraries.
 
 ---
 
-## Features
+## 🖼️ Preview
 
-- Light and dark mode toggle
-- Smooth CSS transitions between themes
-- Built using JavaScript closures
-- Minimal, clean UI
+![Theme Toggle Preview](preview.png)
 
-## Tech Stack
+---
 
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+## ✨ Features
 
-## Run Locally
+- 🎨 Animated gradient background that shifts colors continuously
+- 🌊 Floating background orbs for depth and atmosphere
+- 🔘 Smooth spring-animated toggle switch
+- ☀️ / 🌙 Icon spins on every theme change
+- 💛 Gold accent colors in dark mode
+- 🏷️ Live mode badge that updates instantly
+- 📱 Fully responsive layout
 
-```bash
-git clone https://github.com/kaneeza-batool/theme-toggle-project
-cd theme-toggle-project
-# Open index.html in your browser
+---
+
+## 📁 Project Structure
+
 ```
+ThemeToggle/
+├── index.html    # Markup & structure
+├── style.css     # All animations & theme styles
+├── script.js     # Toggle logic
+└── preview.png   # Screenshot for README
+```
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/your-username/theme-toggle.git
+   cd theme-toggle
+   ```
+
+2. **Open in browser**
+   ```bash
+   # No build step needed — just open directly
+   open index.html
+   ```
+
+---
+
+## 🛠️ How It Works
+
+The toggle is powered by a simple `dark` boolean in `script.js`. Clicking the button or switch calls `toggle()`, which flips the boolean and applies the `.dark` class to the `.page` element. CSS handles the rest through class-based styling.
+
+```js
+let dark = false;
+
+function toggle() {
+  dark = !dark;
+  document.getElementById("page").classList.toggle("dark", dark);
+}
+```
+
+---
+
+## 🎬 Animations Used
+
+| Animation | Effect |
+|-----------|--------|
+| `bgShift` | Gradient background slowly shifts left to right |
+| `floatOrb` | Background orbs gently float up and down |
+| `fadeIn` | Card slides up and fades in on load |
+| `spinIcon` | Sun/moon icon spins on toggle |
+| `pulse` | Icon ring pulses with a soft glow |
+
+---
+
+## 🎨 Theme Colors
+
+| Mode | Background | Accent |
+|------|------------|--------|
+| Light | `#d75d71` → `#f0a0b0` (pink gradient) | White |
+| Dark | `#0d0d1a` → `#1a1a2e` (navy gradient) | `#ffd700` Gold |
+
+---
+
+## 🛠️ Customization
+
+### Change light mode colors
+In `style.css`, update the `.page` background:
+```css
+.page {
+  background: linear-gradient(270deg, #d75d71, #e997a5, #c94b6b, #f0a0b0);
+}
+```
+
+### Change dark mode colors
+```css
+.page.dark {
+  background: linear-gradient(270deg, #0d0d1a, #1a1a2e, #12122a, #0a0a1a);
+}
+```
+
+### Change the subtitle text
+In `script.js`, update the text inside the `toggle()` function:
+```js
+sub.textContent = "Your custom subtitle here";
+```
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♀️ Author
+
+**Kaneeza Batool**  
+CS Undergraduate · Sukkur, Pakistan  
+Built with 💜 using HTML, CSS & JS
