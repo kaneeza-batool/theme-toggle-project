@@ -1,12 +1,13 @@
 # 🌗 Theme Toggle
 
-A sleek, animated light/dark mode toggle built with pure **HTML**, **CSS**, and **JavaScript** — no frameworks, no libraries.
+A sleek, animated light/dark mode toggle built with pure **HTML**, **CSS**, and **JavaScript**, no frameworks, no libraries.
 
 ---
 
 ## 🖼️ Preview
 
-![Theme Toggle Preview](preview.png)
+![Theme Toggle Preview](light-mode-preview.png)
+![Theme Toggle Preview](dark-mode-preview.png)
 
 ---
 
@@ -108,12 +109,6 @@ In `script.js`, update the text inside the `toggle()` function:
 ```js
 sub.textContent = "Your custom subtitle here";
 ```
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
