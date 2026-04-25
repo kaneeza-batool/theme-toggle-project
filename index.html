@@ -3,82 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", sans-serif;
-      }
-      body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #d75d71, #e997a5);
-        transition:
-          background 0.4s ease,
-          color 0.4s ease;
-      }
-      .container {
-        text-align: center;
-        padding: 40px 60px;
-        border-radius: 20px;
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      }
-      .title {
-        font-size: 48px;
-        margin-bottom: 30px;
-        color: maroon;
-        letter-spacing: 1px;
-      }
-
-      #themeBtn {
-        padding: 12px 25px;
-        border: none;
-        border-radius: 30px;
-        background: linear-gradient(135deg, #ffffff, #f1f1f1);
-        color: #800000;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
-      #themeBtn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      }
-      #themeBtn:active {
-        transform: scale(0.95);
-      }
-      .darkMode {
-        background: linear-gradient(135deg, #1e1e1e, #000000);
-        color: white;
-      }
-      .darkMode .container {
-        background: rgba(175, 148, 148, 0.19);
-      }
-
-      .darkMode .title {
-        color: #ffd700;
-      }
-      .darkMode #themeBtn {
-        background: linear-gradient(135deg, #333, #555);
-        color: white;
-      }
-    </style>
+    <title>Theme Toggle</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Toggle Theme -->
-    <div class="container">
-      <h2 class="title">Toggle the theme</h2>
+    <div class="page" id="page">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
 
-      <button id="themeBtn">Toggle Now!</button>
-      <script src="./script.js"></script>
+      <div class="card">
+        <div class="icon-wrap" id="iconWrap">☀️</div>
+        <h2 class="heading" id="heading">Light Mode</h2>
+        <p class="sub" id="sub">Bright, clean and energetic</p>
+
+        <div class="toggle-row">
+          <span class="toggle-label active" id="lightLbl">Light</span>
+          <div class="switch" id="sw" onclick="toggle()">
+            <div class="switch-knob"></div>
+          </div>
+          <span class="toggle-label inactive" id="darkLbl">Dark</span>
+        </div>
+
+        <button class="btn" onclick="toggle()">Toggle Theme</button>
+        <div class="mode-badge" id="badge">● Light mode active</div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
